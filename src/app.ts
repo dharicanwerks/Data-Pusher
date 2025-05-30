@@ -20,11 +20,11 @@ app.use('/server', dataHandlerRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  res.json({
-    success: true,
-    message: 'Data Pusher API is running',
-    timestamp: new Date().toISOString()
-  });
+    res.json({
+        success: true,
+        message: 'Data Pusher API is running',
+        timestamp: new Date().toISOString()
+    });
 });
 
 // Error handling middleware
@@ -33,8 +33,8 @@ app.use(errorHandler);
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Data Pusher API server is running on port ${PORT}`);
-  console.log(`📊 Health check: http://localhost:${PORT}/health`);
+    console.log(`🚀 Data Pusher API server is running on port ${PORT}`);
+    console.log(`📊 Health check: http://localhost:${PORT}/health`);
 });
 
 export default app;

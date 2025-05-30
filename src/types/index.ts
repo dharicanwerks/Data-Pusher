@@ -1,7 +1,7 @@
 
 // src/types/index.ts
 export interface Account {
-    id?: number;
+    id: number;
     accountId: string;
     email: string;
     accountName: string;
@@ -9,9 +9,9 @@ export interface Account {
     website?: string;
     createdAt?: string;
     updatedAt?: string;
-  }
-  
-  export interface Destination {
+}
+
+export interface Destination {
     id?: number;
     accountId: string;
     url: string;
@@ -19,15 +19,15 @@ export interface Account {
     headers: Record<string, string>;
     createdAt?: string;
     updatedAt?: string;
-  }
-  
-  export interface ApiResponse<T = any> {
+}
+
+export interface ApiResponse<T = any> {
     success: boolean;
     message: string;
     data?: T;
     error?: string;
-  }
-  
-  export interface IncomingDataRequest {
+}
+
+export interface IncomingDataRequest {
     [key: string]: any;
-  }
+}
