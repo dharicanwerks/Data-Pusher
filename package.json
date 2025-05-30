@@ -1,0 +1,41 @@
+{
+  "name": "data-pusher",
+  "version": "1.0.0",
+  "description": "An Express web application to receive data into the app server for an account and send it across different platforms (destinations) from that particular account using webhook URLs",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "ts-node src/app.ts",
+    "watch": "nodemon --exec ts-node src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dharicanwerks/Data-Pusher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dharicanwerks/Data-Pusher/issues"
+  },
+  "homepage": "https://github.com/dharicanwerks/Data-Pusher#readme",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "@types/sqlite3": "^3.1.11",
+    "@types/uuid": "^9.0.7",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  }
+}
