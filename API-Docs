@@ -1,0 +1,228 @@
+[
+    {
+        "url": "http://localhoas:3000/api/accounts",
+        "request": {
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "email": "user@example.com",
+                "accountName": "John Doe",
+                "website": "https://example.com"
+            }
+        },
+        "response": {
+            "success": true,
+            "message": "Account created successfully",
+            "data": {
+                "id": 1,
+                "email": "user@example.com",
+                "accountName": "John Doe",
+                "website": "https://example.com"
+            }
+        }
+    },
+    {
+        "url": "http://localhoas:3000/api/accounts",
+        "request": {
+            "method": "GET"
+        },
+        "response": {
+            "success": true,
+            "message": "Accounts retrieved successfully",
+            "data": [
+                {
+                    "id": 1,
+                    "email": "user@example.com",
+                    "accountName": "John Doe",
+                    "website": "https://example.com"
+                },
+                {
+                    "id": 2,
+                    "email": "jane@example.com",
+                    "accountName": "Jane Smith",
+                    "website": "https://janesmith.dev"
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhoas:3000/api/accounts/1",
+        "request": {
+            "method": "GET"
+        },
+        "response": {
+            "success": true,
+            "message": "Account retrieved successfully",
+            "data": {
+                "id": 1,
+                "email": "user@example.com",
+                "accountName": "John Doe",
+                "website": "https://example.com"
+            }
+        }
+    },
+    {
+        "url": "http://localhoas:3000/api/accounts/1",
+        "request": {
+            "method": "PUT",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "website": "https://newwebsite.com"
+            }
+        },
+        "response": {
+            "success": true,
+            "message": "Account updated successfully",
+            "data": {
+                "id": 1,
+                "email": "user@example.com",
+                "accountName": "John Doe",
+                "website": "https://newwebsite.com"
+            }
+        }
+    },
+    {
+        "url": "http://localhoas:3000/api/accounts/1",
+        "request": {
+            "method": "DELETE"
+        },
+        "response": {
+            "success": true,
+            "message": "Account deleted successfully"
+        }
+    },
+    {
+        "url": "http://localhoas:3000/api/destinations",
+        "request": {
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "accountId": "1",
+                "url": "https://api.example.com/data",
+                "httpMethod": "POST",
+                "headers": {
+                    "Authorization": "Bearer token123"
+                }
+            }
+        },
+        "response": {
+            "success": true,
+            "message": "Destination created successfully",
+            "data": {
+                "id": 1,
+                "accountId": "1",
+                "url": "https://api.example.com/data",
+                "httpMethod": "POST",
+                "headers": {
+                    "Authorization": "Bearer token123"
+                }
+            }
+        }
+    },
+    {
+        "url": "http://localhoas:3000/api/destinations",
+        "request": {
+            "method": "GET"
+        },
+        "response": {
+            "success": true,
+            "message": "Destinations retrieved successfully",
+            "data": [
+                {
+                    "id": 1,
+                    "accountId": "1",
+                    "url": "https://api.example.com/data",
+                    "httpMethod": "POST",
+                    "headers": {
+                        "Authorization": "Bearer token123"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhoas:3000/api/destinations/1",
+        "request": {
+            "method": "GET"
+        },
+        "response": {
+            "success": true,
+            "message": "Destination retrieved successfully",
+            "data": {
+                "id": 1,
+                "accountId": "1",
+                "url": "https://api.example.com/data",
+                "httpMethod": "POST",
+                "headers": {
+                    "Authorization": "Bearer token123"
+                }
+            }
+        }
+    },
+    {
+        "url": "http://localhoas:3000/api/destinations/account/1",
+        "request": {
+            "method": "GET"
+        },
+        "response": {
+            "success": true,
+            "message": "Destinations retrieved successfully",
+            "data": [
+                {
+                    "id": 1,
+                    "accountId": "1",
+                    "url": "https://api.example.com/data",
+                    "httpMethod": "POST",
+                    "headers": {
+                        "Authorization": "Bearer token123"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhoas:3000/api/destinations/1",
+        "request": {
+            "method": "PUT",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "url": "https://api.example.com/updated",
+                "httpMethod": "PUT",
+                "headers": {
+                    "Authorization": "Bearer updatedToken456"
+                }
+            }
+        },
+        "response": {
+            "success": true,
+            "message": "Destination updated successfully",
+            "data": {
+                "id": 1,
+                "accountId": "1",
+                "url": "https://api.example.com/updated",
+                "httpMethod": "PUT",
+                "headers": {
+                    "Authorization": "Bearer updatedToken456"
+                }
+            }
+        }
+    },
+    {
+        "url": "http://localhoas:3000/api/destinations/1",
+        "request": {
+            "method": "DELETE"
+        },
+        "response": {
+            "success": true,
+            "message": "Destination deleted successfully"
+        }
+    }
+]
